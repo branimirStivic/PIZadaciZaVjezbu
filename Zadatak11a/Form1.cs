@@ -16,5 +16,26 @@ namespace Zadatak11a
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<int> brojevi=new List<int>();
+            string[] tekst = textBox1.Text.Split(',');
+            int broj;
+            for (int i = 0; i < tekst.Length; i++)
+            {
+                int.TryParse(tekst[i], out broj);
+                brojevi.Add(broj);
+                
+            }
+            brojevi.Sort();
+            string ispis="";
+            foreach (int broj2 in brojevi)
+            {
+                ispis += broj2.ToString()+",";
+
+            }
+            this.textBox1.Text = ispis;
+        }
     }
 }
