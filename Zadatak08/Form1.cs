@@ -16,5 +16,23 @@ namespace Zadatak08
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGO_Click(object sender, EventArgs e)
+        {
+            string URL = txtURL.Text;
+            webBrowser1.Navigate(URL);
+                        
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+           // MessageBox.Show("uspjelo");
+            this.txtURL.BackColor = Color.Lime;
+        }
     }
 }
