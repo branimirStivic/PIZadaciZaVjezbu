@@ -16,5 +16,23 @@ namespace Zadatak19
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            float brojJedan = 0;
+            float brojDva = 0;
+            if (float.TryParse(textBox1.Text, out brojJedan) && float.TryParse(textBox2.Text, out brojDva) && brojDva>0)
+            {
+                double produkt=brojJedan/brojDva;
+                textBox3.Text=produkt.ToString();  
+               
+            }
+            else
+            {
+                MessageBox.Show("Unesite brojeve molim lijepo! *ako nije problem");
+            }
+            
+
+        }
     }
 }
